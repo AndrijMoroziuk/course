@@ -16,6 +16,14 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+        public decimal[] mas1 = new decimal[24];
+        public decimal[] mas2 = new decimal[24];
+        public decimal[] mas3 = new decimal[24];
+        public decimal[] mas4 = new decimal[24];
+        public decimal[] mas5 = new decimal[24];
+        public decimal[] mas6 = new decimal[24];
+        public decimal[] mas7 = new decimal[24];
+        public decimal[] mas8 = new decimal[24];
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -33,6 +41,18 @@ namespace WindowsFormsApplication1
             dataGridView6.RowCount = 4;
             dataGridView7.RowCount = 4;
             dataGridView8.RowCount = 4;
+            for (int i = 0; i < 24; i++)
+            {
+                mas1[i] = 0;
+                mas2[i] = 0;
+                mas3[i] = 0;
+                mas4[i] = 0;
+                mas5[i] = 0;
+                mas6[i] = 0;
+                mas7[i] = 0;
+                mas8[i] = 0;
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -65,14 +85,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        public decimal[] mas1 = new decimal[24];
-        public decimal[] mas2 = new decimal[24];
-        public decimal[] mas3 = new decimal[24];
-        public decimal[] mas4 = new decimal[24];
-        public decimal[] mas5 = new decimal[24];
-        public decimal[] mas6 = new decimal[24];
-        public decimal[] mas7 = new decimal[24];
-        public decimal[] mas8 = new decimal[24];
+        
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -85,18 +98,7 @@ namespace WindowsFormsApplication1
             DynamoK.Name(label3);
             Team PSG = new Team();
             PSG.Name(label4);
-            for (int i = 0; i < 24; i++)
-            {
-                mas1[i] = 0;
-                mas2[i] = 0;
-                mas3[i] = 0;
-                mas4[i] = 0;
-                mas5[i] = 0;
-                mas6[i] = 0;
-                mas7[i] = 0;
-                mas8[i] = 0;
-
-            }
+            
 
            
             PointsT t = new PointsT();
@@ -122,77 +124,73 @@ namespace WindowsFormsApplication1
             {
                 
                 a.Sortuv(Porto, DynamoZ, DynamoK, PSG);
-                dataGridView1.Rows[1].Cells[0].Value = Porto.GetPosition();
-                dataGridView1.Rows[1].Cells[1].Value = DynamoZ.GetPosition();
-                dataGridView1.Rows[1].Cells[2].Value = DynamoK.GetPosition();
-                dataGridView1.Rows[1].Cells[3].Value = PSG.GetPosition();
-                /*a.WriteTable(dataGridView1, Porto, Porto.GetPosition());               //а.к прив'язати до команди
+                a.WriteTable(dataGridView1, Porto, Porto.GetPosition());               
                 a.WriteTable(dataGridView1, DynamoZ, DynamoZ.GetPosition());
                 a.WriteTable(dataGridView1, DynamoK, DynamoK.GetPosition());
-                a.WriteTable(dataGridView1, PSG, PSG.GetPosition());*/
+                a.WriteTable(dataGridView1, PSG, PSG.GetPosition());
                 a.Save(mas1, numericUpDown1, numericUpDown2, numericUpDown3, numericUpDown4, numericUpDown5, numericUpDown6, numericUpDown7, numericUpDown8, numericUpDown9, numericUpDown10, numericUpDown11, numericUpDown12, numericUpDown13, numericUpDown14, numericUpDown15, numericUpDown16, numericUpDown17, numericUpDown18, numericUpDown19, numericUpDown20, numericUpDown21, numericUpDown22, numericUpDown23, numericUpDown24);
             }
             else if (label1.Text == "Монпельє")
             {
                 a.Sortuv(Porto, DynamoZ, DynamoK, PSG);
-                a.WriteTable(dataGridView2, Porto, a.k1);
-                a.WriteTable(dataGridView2, DynamoZ, a.k2);
-                a.WriteTable(dataGridView2, DynamoK, a.k3);
-                a.WriteTable(dataGridView2, PSG, a.k4);
+                a.WriteTable(dataGridView2, Porto, Porto.GetPosition());
+                a.WriteTable(dataGridView2, DynamoZ, DynamoZ.GetPosition());
+                a.WriteTable(dataGridView2, DynamoK, DynamoK.GetPosition());
+                a.WriteTable(dataGridView2, PSG, PSG.GetPosition());
                 a.Save(mas2, numericUpDown1, numericUpDown2, numericUpDown3, numericUpDown4, numericUpDown5, numericUpDown6, numericUpDown7, numericUpDown8, numericUpDown9, numericUpDown10, numericUpDown11, numericUpDown12, numericUpDown13, numericUpDown14, numericUpDown15, numericUpDown16, numericUpDown17, numericUpDown18, numericUpDown19, numericUpDown20, numericUpDown21, numericUpDown22, numericUpDown23, numericUpDown24);
             }
             else if (label1.Text == "Зеніт")
             {
                 a.Sortuv(Porto, DynamoZ, DynamoK, PSG);
-                a.WriteTable(dataGridView3, Porto, a.k1);
-                a.WriteTable(dataGridView3, DynamoZ, a.k2);
-                a.WriteTable(dataGridView3, DynamoK, a.k3);
-                a.WriteTable(dataGridView3, PSG, a.k4);
+                a.WriteTable(dataGridView3, Porto, Porto.GetPosition());
+                a.WriteTable(dataGridView3, DynamoZ, DynamoZ.GetPosition());
+                a.WriteTable(dataGridView3, DynamoK, DynamoK.GetPosition());
+                a.WriteTable(dataGridView3, PSG, PSG.GetPosition());
                 a.Save(mas3, numericUpDown1, numericUpDown2, numericUpDown3, numericUpDown4, numericUpDown5, numericUpDown6, numericUpDown7, numericUpDown8, numericUpDown9, numericUpDown10, numericUpDown11, numericUpDown12, numericUpDown13, numericUpDown14, numericUpDown15, numericUpDown16, numericUpDown17, numericUpDown18, numericUpDown19, numericUpDown20, numericUpDown21, numericUpDown22, numericUpDown23, numericUpDown24);
             }
             else if (label1.Text == "Аякс")
             {
                 a.Sortuv(Porto, DynamoZ, DynamoK, PSG);
-                a.WriteTable(dataGridView4, Porto, a.k1);
-                a.WriteTable(dataGridView4, DynamoZ, a.k2);
-                a.WriteTable(dataGridView4, DynamoK, a.k3);
-                a.WriteTable(dataGridView4, PSG, a.k4);
+                a.WriteTable(dataGridView4, Porto, Porto.GetPosition());
+                a.WriteTable(dataGridView4, DynamoZ, DynamoZ.GetPosition());
+                a.WriteTable(dataGridView4, DynamoK, DynamoK.GetPosition());
+                a.WriteTable(dataGridView4, PSG, PSG.GetPosition());
                 a.Save(mas4, numericUpDown1, numericUpDown2, numericUpDown3, numericUpDown4, numericUpDown5, numericUpDown6, numericUpDown7, numericUpDown8, numericUpDown9, numericUpDown10, numericUpDown11, numericUpDown12, numericUpDown13, numericUpDown14, numericUpDown15, numericUpDown16, numericUpDown17, numericUpDown18, numericUpDown19, numericUpDown20, numericUpDown21, numericUpDown22, numericUpDown23, numericUpDown24);
             }
             else if (label1.Text == "Нордшелланд")
             {
                 a.Sortuv(Porto, DynamoZ, DynamoK, PSG);
-                a.WriteTable(dataGridView5, Porto, a.k1);
-                a.WriteTable(dataGridView5, DynamoZ, a.k2);
-                a.WriteTable(dataGridView5, DynamoK, a.k3);
-                a.WriteTable(dataGridView5, PSG, a.k4);
+                a.WriteTable(dataGridView5, Porto, Porto.GetPosition());
+                a.WriteTable(dataGridView5, DynamoZ, DynamoZ.GetPosition());
+                a.WriteTable(dataGridView5, DynamoK, DynamoK.GetPosition());
+                a.WriteTable(dataGridView5, PSG, PSG.GetPosition());
                 a.Save(mas5, numericUpDown1, numericUpDown2, numericUpDown3, numericUpDown4, numericUpDown5, numericUpDown6, numericUpDown7, numericUpDown8, numericUpDown9, numericUpDown10, numericUpDown11, numericUpDown12, numericUpDown13, numericUpDown14, numericUpDown15, numericUpDown16, numericUpDown17, numericUpDown18, numericUpDown19, numericUpDown20, numericUpDown21, numericUpDown22, numericUpDown23, numericUpDown24);
             }
             else if (label1.Text == "БАТЕ")
             {
                 a.Sortuv(Porto, DynamoZ, DynamoK, PSG);
-                a.WriteTable(dataGridView6, Porto, a.k1);
-                a.WriteTable(dataGridView6, DynamoZ, a.k2);
-                a.WriteTable(dataGridView6, DynamoK, a.k3);
-                a.WriteTable(dataGridView6, PSG, a.k4);
+                a.WriteTable(dataGridView6, Porto, Porto.GetPosition());
+                a.WriteTable(dataGridView6, DynamoZ, DynamoZ.GetPosition());
+                a.WriteTable(dataGridView6, DynamoK, DynamoK.GetPosition());
+                a.WriteTable(dataGridView6, PSG, PSG.GetPosition());
                 a.Save(mas6, numericUpDown1, numericUpDown2, numericUpDown3, numericUpDown4, numericUpDown5, numericUpDown6, numericUpDown7, numericUpDown8, numericUpDown9, numericUpDown10, numericUpDown11, numericUpDown12, numericUpDown13, numericUpDown14, numericUpDown15, numericUpDown16, numericUpDown17, numericUpDown18, numericUpDown19, numericUpDown20, numericUpDown21, numericUpDown22, numericUpDown23, numericUpDown24);
             }
             else if (label1.Text == "Спартак М.")
             {
                 a.Sortuv(Porto, DynamoZ, DynamoK, PSG);
-                a.WriteTable(dataGridView7, Porto, a.k1);
-                a.WriteTable(dataGridView7, DynamoZ, a.k2);
-                a.WriteTable(dataGridView7, DynamoK, a.k3);
-                a.WriteTable(dataGridView7, PSG, a.k4);
+                a.WriteTable(dataGridView7, Porto, Porto.GetPosition());
+                a.WriteTable(dataGridView7, DynamoZ, DynamoZ.GetPosition());
+                a.WriteTable(dataGridView7, DynamoK, DynamoK.GetPosition());
+                a.WriteTable(dataGridView7, PSG, PSG.GetPosition());
                 a.Save(mas7, numericUpDown1, numericUpDown2, numericUpDown3, numericUpDown4, numericUpDown5, numericUpDown6, numericUpDown7, numericUpDown8, numericUpDown9, numericUpDown10, numericUpDown11, numericUpDown12, numericUpDown13, numericUpDown14, numericUpDown15, numericUpDown16, numericUpDown17, numericUpDown18, numericUpDown19, numericUpDown20, numericUpDown21, numericUpDown22, numericUpDown23, numericUpDown24);
             }
             else if (label1.Text == "Галатасарай")
             {
                 a.Sortuv(Porto, DynamoZ, DynamoK, PSG);
-                a.WriteTable(dataGridView8, Porto, a.k1);
-                a.WriteTable(dataGridView8, DynamoZ, a.k2);
-                a.WriteTable(dataGridView8, DynamoK, a.k3);
-                a.WriteTable(dataGridView8, PSG, a.k4);
+                a.WriteTable(dataGridView8, Porto, Porto.GetPosition());
+                a.WriteTable(dataGridView8, DynamoZ, DynamoZ.GetPosition());
+                a.WriteTable(dataGridView8, DynamoK, DynamoK.GetPosition());
+                a.WriteTable(dataGridView8, PSG, PSG.GetPosition());
                 a.Save(mas8, numericUpDown1, numericUpDown2, numericUpDown3, numericUpDown4, numericUpDown5, numericUpDown6, numericUpDown7, numericUpDown8, numericUpDown9, numericUpDown10, numericUpDown11, numericUpDown12, numericUpDown13, numericUpDown14, numericUpDown15, numericUpDown16, numericUpDown17, numericUpDown18, numericUpDown19, numericUpDown20, numericUpDown21, numericUpDown22, numericUpDown23, numericUpDown24);
             }
         }
